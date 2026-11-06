@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homework-marking-system"
+version = "0.1.0"
+description = "Visible notebook marking, table checks, and plot checks for teaching"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Education",
+]
+
+[project.optional-dependencies]
+tables = ["pandas>=2.2,<4", "numpy>=1.26,<3"]
+plots = ["matplotlib>=3.8,<4", "numpy>=1.26,<3"]
+examples = ["pandas>=2.2,<4", "numpy>=1.26,<3", "nbformat>=5", "ipykernel>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
