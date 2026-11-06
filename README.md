@@ -23,10 +23,10 @@ kernel after installation. The core feedback class has no third-party runtime
 dependencies; table and plot support use the optional extras above.
 
 Once this repository is published with a v0.1.0 tag, a student can install
-directly from GitHub (replace YOUR_USERNAME with the real repository owner):
+directly from GitHub:
 
 ```python
-%pip install "homework-marking-system[tables,plots] @ git+https://github.com/YOUR_USERNAME/Homework_marking_system.git@v0.1.0"
+%pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.1.0"
 ```
 
 That is a future installation example, not a currently available repository.
