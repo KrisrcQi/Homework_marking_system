@@ -6,24 +6,11 @@ homework has a separate module defining its own references and checks. The
 public Lab 2 module is bundled, so students need only the package, notebook
 and dataset, with no extra helper file.
 
-**Status:** local prototype, version 0.1.0. Not published on GitHub or PyPI yet.
-The draft repository name is Homework_marking_system; the distribution name
-is homework-marking-system and the import name is homework_marking_system.
+**Status:** testing prototype, version 0.1.0. Published on GitHub with example of homework for lab2.
 
-## Install locally
 
-In a terminal, from this repository folder:
-
-```bash
-python3 -m pip install -e '.[tables,plots]'
-```
-
-In a notebook, `%pip` installs into the current notebook kernel. Restart that
-kernel after installation. The core feedback class has no third-party runtime
-dependencies; table and plot support use the optional extras above.
-
-Once this repository is published with a v0.1.0 tag, a student can install
-directly from GitHub:
+## Installisation
+This repository is published with a v0.1.0 tag, a student can install directly from GitHub:
 
 ```python
 %pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.1.0"
