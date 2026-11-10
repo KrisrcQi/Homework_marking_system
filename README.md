@@ -1,8 +1,8 @@
 # Homework_marking_system
 
-A small MIT-licensed Python package for BA course of MGT 5493 visible notebook auto marking. It moves the feedback class and reusable table/plot assertions out of your notebook. Each homework has a separate module defining its own references and checks. The public Lab 2 module is bundled, so students need only the package, notebook and dataset, with no extra helper file.
+A small MIT-licensed Python package for BA course of MGT 5493 visible notebook auto marking. It moves the feedback class and reusable table/plot assertions out of your notebook. Each homework has a separate module defining its own references and checks. The public Lab 2 and Lab 3 modules are bundled, so students need only the package, notebook and dataset, with no extra helper file.
 
-**Status:** testing prototype, version 0.1.0. Source is published on [GitHub](https://github.com/KrisrcQi/Homework_marking_system). The repository name is Homework_marking_system; the distribution name is homework-marking-system and the Python import name is homework_marking_system.
+**Status:** testing prototype, version 0.2.0. Source is published on [GitHub](https://github.com/KrisrcQi/Homework_marking_system). The repository name is Homework_marking_system; the distribution name is homework-marking-system and the Python import name is homework_marking_system.
 
 ## Installation
 
