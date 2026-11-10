@@ -18,9 +18,7 @@ Or install from a **terminal**, using the Python environment for your notebook:
 python3 -m pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.2.0"
 ```
 
-`%pip` is notebook syntax; do not type the `%` in a terminal. Git must be
-installed for these GitHub installation commands. Restart the notebook kernel
-after installation, then check the import:
+`%pip` is notebook syntax; do not type the `%` in a terminal. Git must be installed for these GitHub installation commands. Restart the notebook kernel after installation, then check the import:
 
 ```python
 import homework_marking_system
@@ -29,22 +27,19 @@ print(homework_marking_system.__version__)
 
 If pip reports `Did not find branch or tag`, such like v.0.1.0, please see the newest version of package tag on [GitHub](https://github.com/KrisrcQi/Homework_marking_system).
 
-The core feedback class has no third-party runtime dependencies. The `tables`
-extra installs pandas/NumPy support; `plots` installs Matplotlib/NumPy support.
+The core feedback class has no third-party runtime dependencies. The `tables` extra installs pandas/NumPy support; `plots` installs Matplotlib/NumPy support.
 For Lab 2 without plot checks, `tables` is sufficient.
 For Lab 3 plot checking is needed, `plots` is required.
 
 ### Local development
 
-After downloading or cloning the repository, open a terminal in the folder
-containing pyproject.toml and run:
+After downloading or cloning the repository, open a terminal in the folder containing pyproject.toml and run:
 
 ```bash
 python3 -m pip install -e '.[tables,plots]'
 ```
 
-This editable install uses your local source. Restart notebook kernels after
-editing or reinstalling code to avoid using previously imported definitions.
+This editable install uses your local source. Restart notebook kernels after editing or reinstalling code to avoid using previously imported definitions.
 
 ## Testing status by Lab2
 
@@ -57,10 +52,7 @@ Local verification completed with Python 3.11.7:
 - A blank submission earned **0/90**; mismatched regional labels were rejected.
 - The example keeps **10 manual marks** separate from automatic feedback.
 
-This is a testing prototype. These checks do not establish compatibility with
-every Python version, operating system, dataset or plotting library. See
-VERIFICATION.json for the recorded local results. GitHub publication alone does
-not mean the package has passed automated CI or been released on PyPI.
+This is a testing prototype. These checks do not establish compatibility with every Python version, operating system, dataset or plotting library. See VERIFICATION.json for the recorded local results. GitHub publication alone does not mean the package has passed automated CI or been released on PyPI.
 
 ## Simple visible marking
 
@@ -75,15 +67,12 @@ with feedback.marks('load'):
 feedback.summarise_marks()
 ```
 
-Each test ID must be unique. Rerunning a test replaces its earlier outcome;
-failures re-raise their exceptions so nbgrader can detect them. The summary
-distinguishes not run, failed, and passed. Hidden and manual points are shown
-separately and are never awarded by the visible summary.
+Each test ID must be unique. Rerunning a test replaces its earlier outcome; failures re-raise their exceptions so nbgrader can detect them. The summary distinguishes not run, failed, and passed. 
 
-Create feedback/marking only once per fresh notebook run. Recreating an object
-resets its outcomes. Use `feedback.reset()` to clear intentionally, or
-`new_assignment.reuse_results(old_assignment)` only when the checks, dataset
-and answers have not changed. Restart and Run All before trusting a result.
+Hidden and manual points are shown separately and are never awarded by the visible summary.
+
+Create feedback/marking only once per fresh notebook run. Recreating an object resets its outcomes. Use `feedback.reset()` to clear intentionally, or `new_assignment.reuse_results(old_assignment)` only when the checks, dataset and answers have not changed. Restart and Run All before trusting a result.
+
 Saved outputs are not live evidence that current answers passed.
 
 ## Keep the first two notebook cells short
@@ -184,6 +173,7 @@ This is no submitted requirement for this homework. To get an up-to-date assessm
 
 
 References:
+- Course of MGT5493: https://github.com/KrisrcQi/Programming_BA
 - Python packaging: https://packaging.python.org/en/latest/tutorials/packaging-projects/
 - pip Git installation: https://pip.pypa.io/en/stable/topics/vcs-support/
 - MIT license: https://opensource.org/license/mit
