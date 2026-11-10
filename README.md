@@ -9,13 +9,13 @@ A small MIT-licensed Python package for BA course of MGT 5493 visible notebook a
 Install from GitHub in a **Jupyter or VS Code notebook cell**:
 
 ```python
-%pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git"
+%pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.2.0"
 ```
 
 Or install from a **terminal**, using the Python environment for your notebook:
 
 ```bash
-python3 -m pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git"
+python3 -m pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.2.0"
 ```
 
 `%pip` is notebook syntax; do not type the `%` in a terminal. Git must be
@@ -27,26 +27,12 @@ import homework_marking_system
 print(homework_marking_system.__version__)
 ```
 
+If pip reports `Did not find branch or tag`, such like v.0.1.0, please see the newest version of package tag on [GitHub](https://github.com/KrisrcQi/Homework_marking_system).
+
 The core feedback class has no third-party runtime dependencies. The `tables`
 extra installs pandas/NumPy support; `plots` installs Matplotlib/NumPy support.
-For Lab 2 without plot checks, `[tables]` is sufficient.
-
-### Fixed versions for a class
-
-The commands above install the repository's current default branch. For
-reproducible teaching, create a GitHub release tag and install that version.
-**Only after the `v0.1.0` tag has been created**, use:
-
-```python
-%pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.1.0"
-```
-
-If pip reports `Did not find branch or tag 'v0.1.0'`, create and publish that
-tag or use the untagged command above. The version in pyproject.toml does not
-automatically create a GitHub tag. A fixed full commit is another option.
-
-GitHub installation does not require publication on PyPI. Plain
-`pip install homework-marking-system` requires a separate PyPI release.
+For Lab 2 without plot checks, `tables` is sufficient.
+For Lab 3 plot checking is needed, `plots` is required.
 
 ### Local development
 
@@ -60,7 +46,7 @@ python3 -m pip install -e '.[tables,plots]'
 This editable install uses your local source. Restart notebook kernels after
 editing or reinstalling code to avoid using previously imported definitions.
 
-## Testing status
+## Testing status by Lab2
 
 Local verification completed with Python 3.11.7:
 
@@ -192,38 +178,10 @@ arbitrary plot or logic is correct without teacher-specified expectations.
 
 ## Visible feedback and final grades
 
-Public tests and references are readable, including when distributed in a pip
-package. Packaging makes notebooks shorter; it does not hide answers. Keep
-hidden tests in a separate instructor environment. Use trusted course tests and
-dataset copies for final nbgrader runs, rather than trusting student-modified
-packages or their saved summaries. This library does not sandbox student code.
+The assessment summary reports how many visible checks have run, how many marks have been earned, and whether all visible checks have passed. 
 
-Points in a notebook's nbgrader metadata must match the corresponding Check
-points. The examples already do. If you change points in the course module,
-update that notebook's test metadata and regenerate the release too.
+This is no submitted requirement for this homework. To get an up-to-date assessment, restart the kernel and run all notebook cells. Students can work on it multiple times till get full marks
 
-## Development and releases
-
-```bash
-python3 -m unittest discover -s tests -v
-python3 tools/verify_lab2.py
-python3 -m pip install build
-python3 -m build
-```
-
-Publish only this repository, not the surrounding teaching workspace. Do not
-include gradebook.db, submissions, backups, or confidential tests. The MIT
-license covers this project's code; third-party datasets need their own reuse
-permission. The draft copyright notice names the project contributors; adjust
-it to your desired copyright holder before publication.
-
-The source repository is
-[KrisrcQi/Homework_marking_system](https://github.com/KrisrcQi/Homework_marking_system).
-For changes, update the version in pyproject.toml and __init__.py, rerun the
-checks, and publish a new GitHub release tag. Do not move an existing class's
-release tag to different grading rules. No package name availability on PyPI
-is implied. PUBLISHING.md includes the original first-upload instructions and
-guidance on tagged installation.
 
 References:
 - Python packaging: https://packaging.python.org/en/latest/tutorials/packaging-projects/
