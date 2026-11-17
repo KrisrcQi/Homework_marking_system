@@ -9,13 +9,13 @@ This package is developed for BA course of MGT5493 visible notebook auto marking
 Install from GitHub in a **Jupyter or VS Code notebook cell**:
 
 ```python
-%pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.2.0"
+%pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.3.0"
 ```
 
 Or install from a **terminal**, using the Python environment for your notebook:
 
 ```bash
-python3 -m pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.2.0"
+python3 -m pip install "homework-marking-system[tables,plots] @ git+https://github.com/KrisrcQi/Homework_marking_system.git@v0.3.0"
 ```
 
 `%pip` is notebook syntax; do not type the `%` in a terminal. Git must be installed for these GitHub installation commands. Restart the notebook kernel after installation, then check the import:
